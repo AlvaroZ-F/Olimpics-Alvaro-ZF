@@ -20,6 +20,8 @@
   <link href="plugins/slick/slick-theme.css" rel="stylesheet">
   <!-- CUSTOM CSS -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/loginStyles.css" rel="stylesheet">
+  <script src="js/login.js"></script>
 
 </head>
 
@@ -61,20 +63,12 @@
             <!-- Dropdown list -->
             <div class="dropdown-menu">
               <a class="dropdown-item" href="about-us.html">About Us</a>
-              <a class="dropdown-item" href="single-speaker.html">Single Speaker</a>
-              <a class="dropdown-item" href="gallery.html">Gallery</a>
-              <a class="dropdown-item" href="gallery-two.html">Gallery-02</a>
-              <a class="dropdown-item" href="testimonial.html">Testimonial</a>
-              <a class="dropdown-item" href="pricing.html">Pricing</a>
-              <a class="dropdown-item" href="FAQ.html">FAQ</a>
+              <a class="dropdown-item" href="gallery.html">Athletes</a>
               <a class="dropdown-item" href="404.html">404</a>
             </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="schedule.html">Schedule<span>/</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="sponsors.html">Sponsors<span>/</span></a>
         </li>
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link" href="#"  data-toggle="dropdown">News
@@ -91,6 +85,35 @@
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
         </li>
+        <li class="nav-item" >
+        	<a class="nav-link" id='usuario' href="#">
+          </a>
+        </li>
+        <li class="nav-item" id='login'>
+        	<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+
+			<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+			    	  <div class="modal-dialog">
+							<div class="loginmodal-container">
+								<h1>Login to Your Account</h1><br>
+							  <form>
+								<input type="text" id="name" name="name" placeholder="Name">
+								<input type="text" id="surname" name="surname" placeholder="Surname">
+								<input type="text" id="gender" name="gender" placeholder="Gender">
+								<input type="text" id="facebook" name="facebook" placeholder="Facebook">
+								<input type="text" id="instagram" name="instagram" placeholder="Instagram">
+								<input type="password" id="pass" name="pass" placeholder="Password">
+								<input type="password" id="pass2" name="pass2" placeholder="Password Repeat">
+								<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+							  </form>
+								
+							  <div class="login-help">
+								<a href="#" onClick="register2('name',' surname',' gender',' facebook',' instagram',' pass',' pass2')">Register</a> - <a href="#" onClick="login()">Forgot Password</a>
+							  </div>
+							</div>
+						</div>
+			</div>
+		</li>
       </ul>
       <a href="#" class="ticket">
         <img src="images/icon/ticket.png" alt="ticket">
@@ -118,6 +141,7 @@
 					<div class="timer"></div>
 					<h1>Olympics</h1>
 					<h2>Tokyo 2022</h2>
+					<div id="warningDiv"></div>
 				</div>
 			</div>
 		</div>
