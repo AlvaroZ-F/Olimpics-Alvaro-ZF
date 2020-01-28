@@ -1,25 +1,4 @@
-/*function checkLogin() {
-	var user = getLogin("username");
-	if (user != "") {
-		alert("Welcome");
-	} else {
-		user = prompt("Please enter name", "");
-	}
-}
-*/
-function register(name, surname, gender, facebook, instagram, pass, pass2) {
-	var user = {
-		'name': name,
-		'surname': surname,
-		'gender': gender,
-		'facebook': facebook,
-		'instagram': instagram,
-		'pass': pass
-	};
-	setCookie("user", JSON.stringify(user), 302);
-}
-
-function register2() {
+function register() {
 	var user = {
 		'name': document.getElementById("name").value,
 		'surname': document.getElementById("surname").value,

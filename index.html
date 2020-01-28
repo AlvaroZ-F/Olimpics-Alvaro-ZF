@@ -36,27 +36,15 @@
   <div class="container-fluid p-0">
       <!-- logo -->
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" alt="logo">
+        <img src="aros.svg" alt="logo" width="180" height="100">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item dropdown active dropdown-slide">
-          <a class="nav-link" href="#"  data-toggle="dropdown">Home
-            <span>/</span>
-          </a>
-          <!-- Dropdown list -->
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="index.html">Homepage</a>
-            <a class="dropdown-item" href="homepage-two.html">Homepage 2</a>
-          </div>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="speakers.html">Speakers
-            <span>/</span>
-          </a>
+          <a class="nav-link" href="index.html">Home<span>/</span></a>
         </li>
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link" href="#" data-toggle="dropdown">Pages<span>/</span></a>
@@ -68,57 +56,38 @@
             </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="schedule.html">Schedule<span>/</span></a>
-        </li>
-        <li class="nav-item dropdown dropdown-slide">
-          <a class="nav-link" href="#"  data-toggle="dropdown">News
-            <span>/</span>
-          </a>
-          <!-- Dropdown list -->
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="news.html">News without sidebar</a>
-            <a class="dropdown-item" href="news-right-sidebar.html">News with right sidebar</a>
-            <a class="dropdown-item" href="news-left-sidebar.html">News with left sidebar</a>
-            <a class="dropdown-item" href="news-single.html">News Single</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="contact.html">Contact<span>/</span></a>
         </li>
         <li class="nav-item" >
         	<a class="nav-link" id='usuario' href="#">
           </a>
         </li>
         <li class="nav-item" id='login'>
-        	<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+        	<a class="nav-link" href="#" data-toggle="modal" data-target="#login-modal">Login</a>
 
 			<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
 			    	  <div class="modal-dialog">
 							<div class="loginmodal-container">
 								<h1>Login to Your Account</h1><br>
 							  <form>
-								<input type="text" id="name" name="name" placeholder="Name">
-								<input type="text" id="surname" name="surname" placeholder="Surname">
-								<input type="text" id="gender" name="gender" placeholder="Gender">
-								<input type="text" id="facebook" name="facebook" placeholder="Facebook">
-								<input type="text" id="instagram" name="instagram" placeholder="Instagram">
+								<input type="text" id="name" name="name" placeholder="Name" hidden>
+								<input type="text" id="surname" name="surname" placeholder="Surname" hidden>
+								<input type="text" id="gender" name="gender" placeholder="Gender" hidden>
+								<input type="text" id="email" name="email" placeholder="E-mail">
+								<input type="text" id="instagram" name="instagram" placeholder="Instagram" hidden>
 								<input type="password" id="pass" name="pass" placeholder="Password">
-								<input type="password" id="pass2" name="pass2" placeholder="Password Repeat">
+								<input type="password" id="pass2" name="pass2" placeholder="Password Repeat" hidden>
 								<input type="submit" name="login" class="login loginmodal-submit" value="Login">
 							  </form>
 								
 							  <div class="login-help">
-								<a href="#" onClick="register2('name',' surname',' gender',' facebook',' instagram',' pass',' pass2')">Register</a> - <a href="#" onClick="login()">Forgot Password</a>
+								<a href="#" onClick="register('name',' surname',' gender',' facebook',' instagram',' pass',' pass2')">Register</a> - <a href="#" onClick="login()">Forgot Password</a>
 							  </div>
 							</div>
 						</div>
 			</div>
 		</li>
       </ul>
-      <a href="#" class="ticket">
-        <img src="images/icon/ticket.png" alt="ticket">
-        <span>Buy Ticket</span>
-      </a>
       </div>
   </div>
 </nav>
