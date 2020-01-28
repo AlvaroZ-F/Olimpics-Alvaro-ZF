@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Vue.js Alvaro Zambrana Fernandez</title>
+  <title>Olympics 2020 - Alvaro Zambrana Fernandez</title>
   
   <!-- PLUGINS CSS STYLE -->
   <!-- Bootstrap -->
@@ -43,9 +43,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home<span>/</span></a>
-        </li>
         <li class="nav-item dropdown dropdown-slide">
           <a class="nav-link" href="#" data-toggle="dropdown">Pages<span>/</span></a>
             <!-- Dropdown list -->
@@ -74,14 +71,16 @@
 								<input type="text" id="surname" name="surname" placeholder="Surname" hidden>
 								<input type="text" id="gender" name="gender" placeholder="Gender" hidden>
 								<input type="text" id="email" name="email" placeholder="E-mail">
-								<input type="text" id="instagram" name="instagram" placeholder="Instagram" hidden>
+								<input type="text" id="network1" name="network1" placeholder="Introduce a social network" hidden>
+								<input type="text" id="network2" name="network2" placeholder="Introduce a social network" hidden>
+								<input type="text" id="network3" name="network3" placeholder="Introduce a social network" hidden>
 								<input type="password" id="pass" name="pass" placeholder="Password">
 								<input type="password" id="pass2" name="pass2" placeholder="Password Repeat" hidden>
-								<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+								<input type="submit" onClick="login()" class="login loginmodal-submit" value="Login">
 							  </form>
 								
 							  <div class="login-help">
-								<a href="#" onClick="register('name',' surname',' gender',' facebook',' instagram',' pass',' pass2')">Register</a> - <a href="#" onClick="login()">Forgot Password</a>
+								<a href="#" onClick="register('name',' surname',' gender',' facebook',' instagram',' pass',' pass2')">Register</a>
 							  </div>
 							</div>
 						</div>
@@ -167,8 +166,8 @@
 			<div class="col-12">
 				<!-- Section Title -->
 				<div class="section-title white">
-					<h3>Who <span class="alternate">Speaking?</span></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusm tempor incididunt ut labore</p>
+					<h3>What games <span class="alternate">are on?</span></h3>
+					<p>The games to be performed at the Olympics 2020 are as follow:</p>
 				</div>
 			</div>
 		</div>
@@ -177,7 +176,7 @@
 				<!-- Speaker 1 -->
 				<div class="speaker-item">
 					<div class="image">
-						<img src="images/speakers/speaker-one.jpg" alt="speaker" class="img-fluid">
+						<img src="img/juegos1.jpeg" alt="speaker" class="img-fluid">
 						<div class="primary-overlay"></div>
 						<div class="socials">
 							<ul class="list-inline">

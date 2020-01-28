@@ -1,10 +1,19 @@
 function register() {
+	document.getElementById("name").show();
+	document.getElementById("surname").show();
+	document.getElementById("gender").show();
+	document.getElementById("network1").show();
+	document.getElementById("network2").show();
+	document.getElementById("network3").show();
+	document.getElementById("pass2").show();
 	var user = {
 		'name': document.getElementById("name").value,
 		'surname': document.getElementById("surname").value,
 		'gender': document.getElementById("gender").value,
-		'facebook': document.getElementById("facebook").value,
-		'instagram': document.getElementById("instagram").value,
+		'email': document.getElementById("email").value,
+		'network1': document.getElementById("network1").value,
+		'network2': document.getElementById("network2").value,
+		'network3': document.getElementById("network3").value,
 		'pass': document.getElementById("pass").value
 	};
 	setCookie("user", JSON.stringify(user), 302);

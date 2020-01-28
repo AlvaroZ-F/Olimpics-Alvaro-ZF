@@ -218,7 +218,7 @@ button:hover {
 }
 
 .bg-banner-one {
-  background: url(../images/background/homepage-one-banner.jpg) no-repeat;
+  background: url(../img/hero.jpeg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
