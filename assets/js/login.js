@@ -1,4 +1,4 @@
-function showRegister() {
+function showRegisterForm() {
 	$('.loginBox').fadeOut('fast',function(){
         $('.registerBox').fadeIn('fast');
         $('.login-footer').fadeOut('fast',function(){
@@ -58,6 +58,21 @@ function setCookie(cname,cvalue,exdays) {
 
 }
 
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return JSON.parse(parts.pop().split(";").shift());
+}
+
+function shakeModal(){
+    $('#loginModal .modal-dialog').addClass('shake');
+             $('.error').addClass('alert alert-danger').html("Invalid email/password combination");
+             $('input[type="password"]').val('');
+             setTimeout( function(){ 
+                $('#loginModal .modal-dialog').removeClass('shake'); 
+    }, 1000 ); 
+}
+
 function login(){
 	var user = getCookie('user'),
 		username = document.getElementById("name").value,
@@ -74,8 +89,17 @@ function login(){
 	}
 }
 
-function getCookie(name) {
-  var value = "; " + document.cookie;
-  var parts = value.split("; " + name + "=");
-  if (parts.length == 2) return JSON.parse(parts.pop().split(";").shift());
+function loginAjax(){
+    /*   Remove this comments when moving to server
+    $.post( "/login", function( data ) {
+            if(data == 1){
+                window.location.replace("/home");            
+            } else {
+                 shakeModal(); 
+            }
+        });
+    */
+
+/*   Simulate error message from the server   */
+     shakeModal();
 }
