@@ -1,11 +1,27 @@
+function showRegister() {
+	$('.loginBox').fadeOut('fast',function(){
+        $('.registerBox').fadeIn('fast');
+        $('.login-footer').fadeOut('fast',function(){
+            $('.register-footer').fadeIn('fast');
+        });
+        $('.modal-title').html('Register with');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+}
+
+function showLoginForm(){
+    $('#loginModal .registerBox').fadeOut('fast',function(){
+        $('.loginBox').fadeIn('fast');
+        $('.register-footer').fadeOut('fast',function(){
+            $('.login-footer').fadeIn('fast');    
+        });
+        
+        $('.modal-title').html('Login with');
+    });       
+     $('.error').removeClass('alert alert-danger').html(''); 
+}
+
 function register() {
-	document.getElementById("name").show();
-	document.getElementById("surname").show();
-	document.getElementById("gender").show();
-	document.getElementById("network1").show();
-	document.getElementById("network2").show();
-	document.getElementById("network3").show();
-	document.getElementById("pass2").show();
 	var user = {
 		'name': document.getElementById("name").value,
 		'surname': document.getElementById("surname").value,
@@ -17,6 +33,21 @@ function register() {
 		'pass': document.getElementById("pass").value
 	};
 	setCookie("user", JSON.stringify(user), 302);
+}
+
+function openLoginModal(){
+    showLoginForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
+}
+function openRegisterModal(){
+    showRegisterForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
 }
 
 function setCookie(cname,cvalue,exdays) {
@@ -39,7 +70,7 @@ function login(){
 			document.getElementById("usuario").innerHTML = 'Hola!, ' + user.name;
 		}
 		else 
-		document.getElementById("warningDiv").innerHTML = '<div class="alert alert-warning"><a href="#" class="btn btn-xs btn-warning pull-right">do an action</a>       <strong>Warning:</strong> you should do an action.    </div>';
+			aler("Warning, you've got something wrong")
 	}
 }
 
