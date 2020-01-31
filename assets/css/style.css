@@ -230,12 +230,6 @@ button:hover {
   background-position: center center;
 }
 
-.bg-banner-two {
-  background: url(../images/background/banner-bg-two.jpg) no-repeat;
-  background-size: cover;
-  background-position: right center;
-}
-
 @media (max-width: 767px) {
   .bg-banner-two {
     background-position: center center;
